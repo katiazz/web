@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encriptar Texto</title>
+</head>
+<body>
+  <h2>Encriptar Texto</h2>
+
+  <!-- Formulario de encriptación -->
+  <form method="POST" action="/encrypt">
+    <label>Texto en claro:</label><br>
+    <input type="text" name="plainText" required><br>
+    <button type="submit">Encriptar</button>
+  </form>
+
+  <% if (result) { %>
+    <h3>Resultado:</h3>
+    <p><strong>Texto encriptado:</strong> <%= result.encrypted %></p>
+    <p><strong>IV:</strong> <%= result.iv %></p>
+  <% } %>
+
+  <p><a href="/decrypt">Ir a Desencriptar</a></p>
+
+  <!-- Enlace para cerrar sesión -->
+  <p><a href="/logout">Cerrar sesión</a></p>
+</body>
+</html>
+
+
