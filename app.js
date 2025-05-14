@@ -12,7 +12,7 @@ const rateLimit = require('express-rate-limit');
 dotenv.config();
 
 const app = express();
-const PORT = 3004;
+const PORT = 3006;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
